@@ -1,7 +1,6 @@
 package com.example.spring_boot;
 import banco.Banco;
-import banco.BancoImpl;
-import caixa.CaixaEletronico;
+import banco.CaixaEletronico;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
@@ -11,27 +10,30 @@ import static org.mockito.Mockito.when;
 public class CaixaEletronicoTest {
 
     @Test
-    void testConsultarSaldoTotalMock() {
+    public void tesMock() {
 
         Banco bancoMock = mock(Banco.class);
 
-        when(bancoMock.getSaldoContaCorrente()).thenReturn(500.0);
-        when(bancoMock.getSaldoContaPoupanca()).thenReturn(1000.0);
+        when(bancoMock.getSaldoContaCorrente()).thenReturn(2000.0);
+        when(bancoMock.getSaldoContaPoupanca()).thenReturn(3000.0);
 
         CaixaEletronico caixaEletronico = new CaixaEletronico(bancoMock);
 
-        assertEquals(1500.0, caixaEletronico.consultarSaldoTotal());
+        double total = caixaEletronico.calcularSaldoTotal();
+        assertEquals(5000.0, total);
     }
 
     @Test
-    void testConsultarSaldoTotalSpy() {
+    public void testSpy() {
 
-        Banco bancoSpy = spy(BancoImpl.class);
+        Banco bancoReal = new Banco();
+        Banco bancoSpy = spy(bancoReal);
 
-        when(bancoSpy.getSaldoContaCorrente()).thenReturn(500.0);
+        when(bancoSpy.getSaldoContaCorrente()).thenReturn(2000.0);
 
         CaixaEletronico caixaEletronico = new CaixaEletronico(bancoSpy);
 
-        assertEquals(2500.0, caixaEletronico.consultarSaldoTotal());
+        double saldoTotal = caixaEletronico.calcularSaldoTotal();
+        assertEquals(7000.0, saldoTotal);
     }
 }

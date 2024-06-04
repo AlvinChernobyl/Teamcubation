@@ -1,4 +1,4 @@
-package banco;
+package ex;
 
 public class Banco {
     public double getSaldoContaCorrente() {

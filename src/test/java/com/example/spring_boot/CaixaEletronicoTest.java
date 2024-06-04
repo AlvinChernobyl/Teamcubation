@@ -1,16 +1,16 @@
 package com.example.spring_boot;
-import banco.Banco;
-import banco.CaixaEletronico;
+import ex.Banco;
+import ex.CaixaEletronico;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.when;
 
-public class CaixaEletronicoTest {
+class CaixaEletronicoTest {
 
     @Test
-    public void tesMock() {
+    void tesMock() {
 
         Banco bancoMock = mock(Banco.class);
 
@@ -24,7 +24,7 @@ public class CaixaEletronicoTest {
     }
 
     @Test
-    public void testSpy() {
+    void testSpy() {
 
         Banco bancoReal = new Banco();
         Banco bancoSpy = spy(bancoReal);

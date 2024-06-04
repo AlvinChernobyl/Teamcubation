@@ -1,4 +1,4 @@
-package banco;
+package ex;
 
 public class CaixaEletronico {
     private Banco banco;
@@ -10,7 +10,6 @@ public class CaixaEletronico {
     public double calcularSaldoTotal() {
         double saldoCorrente = banco.getSaldoContaCorrente();
         double saldoPoupanca = banco.getSaldoContaPoupanca();
-
         return saldoCorrente + saldoPoupanca;
     }
 }

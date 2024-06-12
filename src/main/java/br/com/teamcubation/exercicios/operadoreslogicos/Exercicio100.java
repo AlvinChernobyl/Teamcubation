@@ -1,6 +1,6 @@
 package br.com.teamcubation.exercicios.operadoreslogicos;
 
-public class Exercicio10 {  public static void main(String[] args) {
+public class Exercicio100 {  public static void main(String[] args) {
     String classificacao = "Libertadores";
 
     switch (classificacao) {

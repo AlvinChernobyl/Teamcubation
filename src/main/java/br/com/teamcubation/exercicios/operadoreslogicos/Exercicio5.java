@@ -1,6 +1,6 @@
 package br.com.teamcubation.exercicios.operadoreslogicos;
 
-public class Exercicio05 {
+public class Exercicio5 {
     public static void main(String[] args) {
         String desempenho = "semifinal";
 

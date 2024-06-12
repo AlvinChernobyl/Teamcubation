@@ -1,6 +1,6 @@
 package br.com.teamcubation.exercicios.operadoreslogicos;
 
-public class Exercicio08 {
+public class Exercicio8 {
 
     public static void main(String[] args) {
         int jogadoresTime1 = 6;

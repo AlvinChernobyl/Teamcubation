@@ -1,6 +1,6 @@
 package br.com.teamcubation.exercicios.operadoreslogicos;
 
-public class Exercicio07 {
+public class Exercicio7 {
 
     public static void main(String[] args) {
         int penaltis = 3;

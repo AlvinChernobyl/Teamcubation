@@ -1,6 +1,6 @@
 package br.com.teamcubation.exercicios.operadoreslogicos;
 
-public class Exercicio09 {
+public class Exercicio9 {
 
     public static void main(String[] args) {
         int jogosSeguidos = 5;
